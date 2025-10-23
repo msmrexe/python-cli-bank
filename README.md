@@ -16,8 +16,10 @@ The application uses a simple CSV file as a database and follows a three-layer a
 * **Data Persistence**: All account data is loaded from and saved to a `.csv` file.
 * **Robust Error Handling**: Uses exceptions (`try...except`) to handle invalid inputs (like non-numeric IDs) and failed business logic (like insufficient funds).
 * **CLI Interface**: A clean, interactive command-line menu for all operations.
-* 
+
 ## Project Structure
+
+This repository is organized as a Python package to separate the core bank logic from the runnable script and utilities.
 
 ```
 python-cli-bank/
@@ -25,11 +27,13 @@ python-cli-bank/
 ├── LICENSE                     # MIT license file
 ├── README.md                   # This documentation
 ├── requirements.txt            # Data generation library requirement
-├── models.py                   # Contains the BankAccount class (the "Model")
-├── bank.py                     # Contains the Bank class (the "Controller")
 ├── main.py                     # The runnable script with all UI (the "View")
+├── bank/                
+│   ├── __init__.py             # Makes 'bank' a package
+│   ├── bank.py                 # Contains the Bank class (the "Controller")
+│   └── models.py               # Contains the BankAccount class (the "Model")
 └── scripts/
-    └── generate_fake_data.py    # Script to generate sample Bank.csv
+    └── generate_fake_data.py   # Script to generate sample Bank.csv
 ```
 
 ## Getting Started
