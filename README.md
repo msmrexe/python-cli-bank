@@ -16,17 +16,48 @@ The application uses a simple CSV file as a database and follows a three-layer a
 * **Data Persistence**: All account data is loaded from and saved to a `.csv` file.
 * **Robust Error Handling**: Uses exceptions (`try...except`) to handle invalid inputs (like non-numeric IDs) and failed business logic (like insufficient funds).
 * **CLI Interface**: A clean, interactive command-line menu for all operations.
-
+* 
 ## Project Structure
 
 ```
 simple-bank/
-├── .gitignore         # Ignores data files and cache
-├── LICENSE            # MIT license file
-├── README.md          # This documentation
-├── models.py          # Contains the BankAccount class (the "Model")
-├── bank.py            # Contains the Bank class (the "Controller")
-└── main.py            # The runnable script with all UI (the "View")
+├── .gitignore                  # Ignores data files and cache
+├── LICENSE                     # MIT license file
+├── README.md                   # This documentation
+├── requirements.txt            # Data generation library requirement
+├── models.py                   # Contains the BankAccount class (the "Model")
+├── bank.py                     # Contains the Bank class (the "Controller")
+├── main.py                     # The runnable script with all UI (the "View")
+└── scripts/
+   └── generate_fake_data.py    # Script to generate sample Bank.csv
+```
+
+## Getting Started
+
+This application requires a `Bank.csv` data file to run. A script is provided to generate a sample file with fake data.
+
+### 1. Install Dependencies
+
+This project uses the `faker` library to create realistic data. Install it using the `requirements.txt` file:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Generate Sample Data
+
+Run the data generation script. This will create a `Bank.csv file` in the root of the project.
+
+```bash
+python scripts/generate_fake_data.py
+```
+
+### 3. Run the Application
+
+Once the `Bank.csv` file exists, you can run the main application:
+
+```bash
+python main.py
 ```
 
 ## Usage
