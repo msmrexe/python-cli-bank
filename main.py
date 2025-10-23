@@ -80,7 +80,7 @@ def run_account_menu(account: BankAccount, bank: Bank):
 
 def main():
     """Runs the main application loop."""
-    parser = argparse.ArgumentParser(description="Welcome to the Bank of Wonderland!")
+    parser = argparse.ArgumentParser(description="Welcome to the Bank of Merryland!")
     parser.add_argument(
         '--db',
         type=str,
@@ -89,7 +89,7 @@ def main():
     )
     args = parser.parse_args()
 
-    print("Welcome to the Bank of Wonderland!")
+    print("Welcome to the Bank of Merryland!")
     
     bank = Bank(db_path=args.db)
     try:
@@ -131,7 +131,7 @@ def main():
                 print("No matching account. Check your info and try again.\n")
 
         elif choice == '3':
-            print("\nThank you for banking with the Bank of Wonderland!")
+            print("\nThank you for banking with the Bank of Merryland!")
             break
 
         else:
