@@ -29,7 +29,7 @@ python-cli-bank/
 ├── bank.py                     # Contains the Bank class (the "Controller")
 ├── main.py                     # The runnable script with all UI (the "View")
 └── scripts/
-   └── generate_fake_data.py    # Script to generate sample Bank.csv
+    └── generate_fake_data.py    # Script to generate sample Bank.csv
 ```
 
 ## Getting Started
