@@ -20,7 +20,7 @@ The application uses a simple CSV file as a database and follows a three-layer a
 ## Project Structure
 
 ```
-simple-bank/
+python-cli-bank/
 ├── .gitignore                  # Ignores data files and cache
 ├── LICENSE                     # MIT license file
 ├── README.md                   # This documentation
