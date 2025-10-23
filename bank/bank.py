@@ -11,7 +11,7 @@ This class is responsible for:
 
 import csv
 import random
-from models import BankAccount
+from .models import BankAccount
 
 class Bank:
     """Manages all bank accounts and data persistence."""
